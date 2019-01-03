@@ -1,0 +1,6 @@
+{
+  "sgf_parsing_test.py::SgfParsingTest::test_escaped_property": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_node_without_tree": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_two_child_trees": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_two_nodes": true
+}

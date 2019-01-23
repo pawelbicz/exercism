@@ -1,5 +1,8 @@
 def is_equilateral(sides):
-    pass
+    result = list(filter(lambda x: x == sides[0], sides))
+    if len(result) == 3:
+        return True
+    return False
 
 
 def is_isosceles(sides):

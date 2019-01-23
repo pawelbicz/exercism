@@ -15,7 +15,9 @@ def is_isosceles(sides):
 
 
 def is_scalene(sides):
-    pass
+    if len(list(set(sides))) == 3 and is_triangle(sides):
+        return True
+    return False
 
 
 def is_triangle(s):

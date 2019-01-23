@@ -1,15 +1,11 @@
 def is_equilateral(sides):
-    if is_triangle(sides) is not True:
-        return False
-    if len(list(set(sides))) == 1:
+    if len(list(set(sides))) == 1 and is_triangle(sides):
         return True
     return False
 
 
 def is_isosceles(sides):
-    if is_triangle(sides) is not True:
-        return False
-    if len(list(set(sides))) < 3:
+    if len(list(set(sides))) < 3 and is_triangle(sides):
         return True
     return False
 

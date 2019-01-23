@@ -18,8 +18,14 @@ def is_scalene(sides):
 
 def is_triangle(s):
     r = list(filter(lambda x: x > 0, s))
-    if len(r) == 3:
+    if len(r) == 3 and is_properly_length_of_sides(s):
         return True
     return False
 
-print(is_isosceles([4, 4, 4]))
+
+def is_properly_length_of_sides(s):
+    longest_side = max(s)
+    s.remove(longest_side)
+    if sum(s) > longest_side:
+        return True
+    return False

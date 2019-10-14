@@ -4,4 +4,4 @@ def convert(number):
     for num, sound in raindrops:
         if number % num == 0:
             result += sound
-    return result if len(result) > 0 else str(number)
+    return result or str(number)

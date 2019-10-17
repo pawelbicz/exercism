@@ -1,7 +1,4 @@
 def convert(number):
     raindrops = ((3, 'Pling'), (5, 'Plang'), (7, 'Plong'))
-    result = ''
-    for num, sound in raindrops:
-        if number % num == 0:
-            result += sound
-    return result or str(number)
+    sound = [s for n, s in raindrops if number % n == 0]
+    return ''.join(sound) if sound else str(number)

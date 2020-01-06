@@ -1,6 +1,6 @@
 def is_isogram(string):
-    string = ''.join([i.lower()  for i in string if i.isalpha()])
-    for char in string:
-        if string.count(char) > 1:
-            return False
-    return True
+    word = ''.join([char.lower() for char in string if char.isalpha()])
+    single_letters = []
+    [single_letters.append(char) for char in word if word.count(char) == 1]
+
+    return len(word) == len(single_letters)

@@ -67,4 +67,4 @@ class BankAccount(object):
                 self._is_open_account = False
                 self._balance = 0
             else:
-                raise ValueError('Account closed')
+                raise ValueError('Account already closed')

@@ -1,3 +1,5 @@
+import re
+
 class Phone(object):
     def __init__(self, phone_number):
         self.number = self.clear_number(phone_number)
@@ -5,7 +7,7 @@ class Phone(object):
         self.exchance_code = self.number[3:]
 
     def clear_number(self, phone_number):
-        num = ''.join(i for i in phone_number if i.isdigit())
+        num = re.sub(r'\D', '', phone_number)
         if num.startswith('1'):
             num = num[1:]
         if len(num) != 10:
@@ -18,3 +20,5 @@ class Phone(object):
 
     def pretty(self):
         return f'({self.area_code}) {self.exchance_code[:3]}-{self.exchance_code[3:]}'
+
+# print(Phone('223.456.7890').number)
